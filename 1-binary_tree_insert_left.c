@@ -22,7 +22,10 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 		return (NULL);
 
 	if (!parent)
+	{
+		free(new_node);
 		return (NULL);
+	}
 
 	/**
 	 * make @new_node, left child of parent node and old child node, the
@@ -36,12 +39,12 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 		new_node->parent = parent;
 		temp->parent = new_node;
 		new_node->left = temp;
-		new_node->n = value;
 	}
 	else
 	{
-		parent->left = binary_tree_node(parent, value);
+		parent->left = new_node;
+		new_node->parent = parent;
 	}
-
+	new_node->n = value;
 	return (new_node);
 }
