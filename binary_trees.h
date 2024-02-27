@@ -4,6 +4,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stddef.h>
+
 
 
 /* ------Structure for binary tree------ */
@@ -73,5 +75,9 @@ heap_t *heap_insert(heap_t **root, int value);
 heap_t *array_to_heap(int *array, size_t size);
 int heap_extract(heap_t **root);
 int *heap_to_sorted_array(heap_t *heap, size_t *size);
+
+
+/* ------Extra Prototypes------ */
+void binary_tree_print(const binary_tree_t *tree);
 
 #endif
