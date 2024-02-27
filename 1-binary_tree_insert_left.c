@@ -22,7 +22,7 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 		return (NULL);
 
 	if (!parent)
-		return (new_node);
+		return (NULL);
 
 	/**
 	 * make @new_node, left child of parent node and old child node, the
