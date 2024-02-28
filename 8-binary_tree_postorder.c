@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_preorder - This function traverses a binary tree with in
+ * binary_tree_postorder - This function traverses a binary tree with in
  * postorder
  * @tree: The tree to traverse
  * @func: pointer to a function that recieves an integer
